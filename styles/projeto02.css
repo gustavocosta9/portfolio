@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;400;600&display=swap');
+
+
+:root{ /* Declaração de variáveis */
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #FF7000;
+    --cor-hover: #2C3333;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    /*height: 100vh; */
+    width: 100vw;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho_menu{
+    display:flex;
+    gap:80px;
+}
+.cabecalho_menu_botoes{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+}
+
+.cabecalho_menu_botoes:hover{
+    cursor:pointer;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center; /* Aqui ele alinha no centro de acordo com o maior elemento que está presente */
+    justify-content: space-between;
+    gap: 82px;
+    padding: 10% 15%;
+}
+.apresentacao_foto{
+    border-radius: 10px;
+    width: 50%;
+}
+
+.apresentacao_conteudo{
+    display: flex;
+    flex-direction: column; /*Por padrão, o flexbox coloca os elementos alinhados horizontalmente, precisa mudar de acordo com o projeto */
+    gap: 40px; /*O gap é responsável pelo espaçamentro entre os elementos filhos dentro de uma flexbox */
+    width: 50%;
+    
+
+}
+
+.apresentacao_conteudo_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao_conteudo_texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+
+}
+
+.tituloDestaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao_botoes{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.apresentacao_botoes_subtitulo{
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.apresentacao_botoes_botao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 2px solid var(--cor-terciaria);
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    border-radius: 8px;
+    width: 280px;
+    padding: 21px 0px;
+
+   
+}
+
+.apresentacao_botoes_botao:hover{
+    background: var(--cor-hover);
+    cursor:pointer;
+    font-size: 1.875rem;
+}
+
+.logo{
+    width: 2.0625rem;
+    height: 2rem;
+}
+
+
+
+
+
+.rodape{
+    color:var(--cor-primaria);
+    background: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size:1.5rem;
+    font-weight: 400px;
+    margin: 110px 0 0 0;
+}
+
+
+/* CSS da página ABOUT */
+
+.sobremim{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    padding: 10% 15%;
+}
+
+.sobremim_conteudo{
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    width: 50%;
+
+}
+
+.sobremim_conteudo_titulo{
+    font-size: 2.25rem;
+    font-weight: 400px;
+    font-family: var(--fonte-primaria);
+}
+
+.sobremim_conteudo_paragrafo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-secundaria);
+}
+
+@media (max-width: 1200px){
+
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho_menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction:column-reverse;
+        padding: 5%;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+    }
+
+    .sobremim{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .sobremim_conteudo{
+        width: auto;
+    }
+}
